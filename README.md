@@ -1,53 +1,38 @@
 
+---
 
-## 📘 Assignment 3: N-Gram Based Translation
+## 🇪🇸 Assignment 3: English to Spanish Seq2Seq with BiLSTM
 
-**File**: `Aishwarya_A3_DL!!!.ipynb`  
-**Approach**:  
-- Uses unigram and bigram frequency statistics for translation
-- Implements **Good-Turing** and **Kneser-Ney** smoothing
-- Predicts English output word-by-word given French context
-- Evaluates using **perplexity**
+**Notebook**: `Aishwarya_A3_DL!!!.ipynb`
 
-**Key Components**:
-- Bigram language model
-- Frequency-based predictions
-- Probability smoothing for unseen words
-- Perplexity metric for model evaluation
+- Dataset: English–Spanish parallel corpus from [Tatoeba via ManyThings.org](http://www.manythings.org/anki/)
+- Encoder: ✅ **Bidirectional LSTM**
+- Decoder: Standard LSTM with teacher forcing
+- Tokenization, padding, and preprocessing included
+- Output: Translation predictions for Spanish sentences
+
+### What was implemented:
+- `Bidirectional(LSTM(...))` used in encoder
+- Input and target vocabulary handling
+- End-to-end training with `categorical_crossentropy` loss
 
 ---
 
-## 🤖 Assignment 4: Neural Machine Translation with Seq2Seq
+## 🇫🇷 Assignment 4: French to English Seq2Seq with Attention
 
-**File**: `A4_Bhethanabotla_Aishwarya_!ipynb.ipynb`  
-**Approach**:  
-- Trains an **encoder-decoder** model with **GRU** and **Bahdanau attention**
-- Uses the [IWSLT 2017 French-English](https://huggingface.co/datasets/iwslt2017) dataset
-- Evaluates with **BLEU Score** and **perplexity**
+**Notebook**: `A4_Bhethanabotla_Aishwarya_!ipynb.ipynb`
 
-**Key Components**:
-- Tokenization and padding
-- Encoder-Decoder architecture
-- Attention mechanism for alignment
-- Training with cross-entropy loss
-- BLEU score-based evaluation
+- Dataset: [IWSLT 2017 French-English](https://huggingface.co/datasets/iwslt2017)
+- Encoder: GRU
+- Decoder: GRU with **Bahdanau Attention**
+- Evaluation: ✅ **BLEU score**, ✅ **Perplexity**
+- Outputs attention-aligned translations
 
 ---
 
-## 📊 Metrics Comparison
-
-| Metric | N-Gram Model | Seq2Seq Model |
-|--------|--------------|---------------|
-| Perplexity | ✅ Implemented | ✅ Implemented |
-| BLEU Score | ❌ Not applicable | ✅ Implemented |
-| Qualitative Translation | ✅ Rule-based | ✅ Learned end-to-end |
-
----
-
-## ⚙️ Installation
-
-Install required libraries:
+## 📦 Installation
 
 ```bash
 pip install -r requirements.txt
+
 
