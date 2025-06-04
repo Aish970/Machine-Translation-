@@ -1,5 +1,4 @@
 
----
 
 ## 📘 Assignment 3: N-Gram Based Translation
 
